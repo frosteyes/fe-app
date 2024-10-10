@@ -8,10 +8,13 @@
 #  Author(s):
 #     Claus Stovgaard (claus@frosteyes.dk)
 
-find_package (Boost CONFIG)
+find_package (Boost COMPONENTS program_options system REQUIRED)
 
 add_library(FEApp
+            ArgumentParser.cpp
             FEApp.cpp)
+
+include_directories(${Boost_INCLUDE_DIRS})
 
 target_link_libraries (FEApp ${Boost_LIBRARIES})
 

@@ -9,6 +9,7 @@
 //    Claus Stovgaard (claus@frosteyes.dk)
 //
 
+#include "ArgumentParser.hpp"
 #include "FEApp.hpp"
 #include <cassert>
 #include <iostream>
@@ -29,9 +30,9 @@ FEApp::~FEApp() {
 
 void FEApp::Run(int argc, char** argv) {
   // Handle program arguments
-  // TODO
+  ArgumentParser ap(argc, argv);
 
-  cout << "Hello from FEApp" << endl;
+  // TODO - use the arguments for something
 }
 
 } // namespace fe
